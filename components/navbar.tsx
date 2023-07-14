@@ -6,10 +6,10 @@ const movie = () => {
     <nav className=" flex items-center justify-between py-0 mb-4 bg-[#032541]">
       <ul className="flex items-center text-white">
         <li className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r to-cyan-500 from-teal-500 ml-8 mr-4">
-          <a href="#">TMDB</a>
+          <a href="/">TMDB</a>
         </li>
         <li>
-          <a className="mr-4" href="#">
+          <a className="mr-4" href="">
             Movies
           </a>
         </li>
