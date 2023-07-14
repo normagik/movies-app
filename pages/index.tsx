@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -5,8 +6,19 @@ import { FiPlus } from "react-icons/fi";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { AiFillQuestionCircle } from "react-icons/ai";
+import testimage from "../public/test.jpeg";
 
 export default function Home() {
+  useEffect(() => {
+    const getMovies = async () => {
+      const query = await fetch(
+        "https://api.themoviedb.org/3/movie/157336?api_key=4f298a53e552283bee957836a529baec"
+      );
+      const response = await query.json();
+      console.log(response);
+    };
+    getMovies();
+  });
   return (
     <div>
       <Head>
@@ -141,7 +153,8 @@ export default function Home() {
                   <p className="text-[#999999]">Availabilities</p>
                   <div>
                     <input
-                      className="accent-[#03B4E4]"
+                      className="
+                       accent-[#03B4E4]"
                       id="availabilities"
                       type="checkbox"
                       value=""
@@ -194,10 +207,28 @@ export default function Home() {
           </div>
           <div className=" w-3/4 col-span-1 ">
             <div className="grid w-1/4 col-span-4">
-              <div className="shadow-lg rounded-md">
-                <Image src="" alt="" />
-                <h3 className="text-md font-bold pt-8 pb-2">Lorem Ipsum</h3>
-                <p className="pb-2">loremipsum</p>
+              <div className="shadow-lg rounded-md w-[200px] h-auto cursor-pointer">
+                <div className="relative  bg-gray-400 opacity-50 w-8 h-8 rounded-full mb-[-40px] ml-40">
+                  <div className="absolute text-white text-2xl left-2 bottom-2">
+                    ...
+                  </div>
+                </div>
+                <Image
+                  className="rounded-md"
+                  src={testimage}
+                  alt="movie poster"
+                  width="200"
+                  height="200"
+                />
+                <div className="relative bg-[#081C22] w-12 h-12 rounded-full mt-[-24px] ml-4">
+                  <div className="absolute text-white text-sm left-2.5 top-3">
+                    80%
+                  </div>
+                </div>
+                <div className="pl-4">
+                  <h3 className="text-sm font-extrabold pt-4 ">Lorem Ipsum</h3>
+                  <p className="text-sm pb-2 text-[#626664]">loremipsum</p>
+                </div>
               </div>
             </div>
           </div>
