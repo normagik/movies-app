@@ -16,7 +16,7 @@ export default function Home() {
       <main >
         <nav className=" flex items-center justify-between py-1 mb-12 bg-[#032541]">
           <ul className='flex items-center text-white'>
-            <li className='font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 mr-4' ><a className='' href="#">TMDB</a></li>
+            <li className='font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-teal-500 ml-8 mr-4' ><a className='' href="#">TMDB</a></li>
             <li><a className='mr-4' href="#">Movies</a></li>
             <li><a className='mr-4' href="#">TV Shows</a></li>
             <li><a className='mr-4' href="#">People</a></li>
@@ -28,7 +28,7 @@ export default function Home() {
             <li><a className='mx-4' href="#">EN</a></li>
             <li><a className='mr-4' href="#">Login</a></li>
             <li><a className='mr-4' href="#">Join TMDB</a></li>
-            <li><a className='text-[#00B4E4] text-2xl mx-4' href="#"><AiOutlineSearch/></a></li>
+            <li><a className='text-[#00B4E4] text-2xl ml-4 mr-10' href="#"><AiOutlineSearch/></a></li>
           </ul>
         </nav>
         <section className="ml-8">
@@ -36,10 +36,10 @@ export default function Home() {
           <div className="w-1/4 grid col-span-1">
           <button className="shadow-lg p-4 mb-4 rounded-xl">Sort<RiArrowRightSLine className='inline-block'/></button>
           <button className="shadow-lg p-4 rounded-xl">Where To Watch<RiArrowRightSLine className='inline-block'/></button>
-          </div>
-          <div className=" block shadow-lg p-10 rounded-xl">
-            <h2>Filters</h2>
-            <div>
+          
+          <div className=" block shadow-lg  rounded-xl divide-y">
+            <h2 >Filters</h2>
+            <div className=''>
             <p>Show Me</p>
             <fieldset>
             <div>
@@ -56,11 +56,14 @@ export default function Home() {
             </div>
             </fieldset>
             </div>
+            <div>
             <p>Availabilities</p>
             <div>
             <input id="availabilities" type="checkbox" value="" name="availabilities" checked />
             <label  htmlFor="availabilities">Everything</label>
             </div>
+            </div>
+            <div>
             <p>Release Dates</p>
             <div>
             <input id="releases" type="checkbox" value="" name="releases" checked />
@@ -68,9 +71,12 @@ export default function Home() {
             </div>
             <p>from</p>
             <p>to</p>
+            </div>
+            <div>
             <p>Genres</p>
+            </div>
 
-
+</div>
 
           </div>
 
