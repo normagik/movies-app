@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import  {AiOutlineSearch}  from 'react-icons/ai'
 import {FiPlus} from 'react-icons/fi'
+import {RiArrowRightSLine} from 'react-icons/ri'
 
 export default function Home() {
   return (
@@ -29,9 +30,51 @@ export default function Home() {
             <li><a className='mr-4' href="#">Join TMDB</a></li>
             <li><a className='text-[#00B4E4] text-2xl mx-4' href="#"><AiOutlineSearch/></a></li>
           </ul>
-
-
         </nav>
+        <section className="ml-8">
+          <h1 className='text-xl mb-4'>Popular Movies</h1>
+          <div className="w-1/4 grid col-span-1">
+          <button className="shadow-lg p-4 mb-4 rounded-xl">Sort<RiArrowRightSLine className='inline-block'/></button>
+          <button className="shadow-lg p-4 rounded-xl">Where To Watch<RiArrowRightSLine className='inline-block'/></button>
+          </div>
+          <div className=" block shadow-lg p-10 rounded-xl">
+            <h2>Filters</h2>
+            <div>
+            <p>Show Me</p>
+            <fieldset>
+            <div>
+            <input id="everything" type="radio" value="" name="everything" checked />
+            <label htmlFor="everything">Everything</label>
+            </div>
+            <div>
+            <input id="seen" type="radio" value="" name="seen" />
+            <label htmlFor="seen">Movies I Have Seen</label>
+            </div>
+            <div>
+            <input id="not-seen" type="radio" value="" name="not seen" />
+            <label htmlFor="not-seen">Movies I Haven't Seen</label>
+            </div>
+            </fieldset>
+            </div>
+            <p>Availabilities</p>
+            <div>
+            <input id="availabilities" type="checkbox" value="" name="availabilities" checked />
+            <label  htmlFor="availabilities">Everything</label>
+            </div>
+            <p>Release Dates</p>
+            <div>
+            <input id="releases" type="checkbox" value="" name="releases" checked />
+            <label  htmlFor="releases">Search All Releases?</label>
+            </div>
+            <p>from</p>
+            <p>to</p>
+            <p>Genres</p>
+
+
+
+          </div>
+
+        </section>
 
 
       </main>
