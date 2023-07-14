@@ -1,24 +1,12 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { AiOutlineSearch } from "react-icons/ai";
-import { FiPlus } from "react-icons/fi";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { AiFillQuestionCircle } from "react-icons/ai";
 import testimage from "../public/test.jpeg";
 
 export default function Home() {
-  useEffect(() => {
-    const getMovies = async () => {
-      const query = await fetch(
-        "https://api.themoviedb.org/3/movie/157336?api_key=4f298a53e552283bee957836a529baec"
-      );
-      const response = await query.json();
-      console.log(response);
-    };
-    getMovies();
-  });
   return (
     <div>
       <Head>
@@ -31,61 +19,6 @@ export default function Home() {
       </Head>
 
       <main>
-        <nav className=" flex items-center justify-between py-0 mb-4 bg-[#032541]">
-          <ul className="flex items-center text-white">
-            <li className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r to-cyan-500 from-teal-500 ml-8 mr-4">
-              <a href="#">TMDB</a>
-            </li>
-            <li>
-              <a className="mr-4" href="#">
-                Movies
-              </a>
-            </li>
-            <li>
-              <a className="mr-4" href="#">
-                TV Shows
-              </a>
-            </li>
-            <li>
-              <a className="mr-4" href="#">
-                People
-              </a>
-            </li>
-            <li>
-              <a className="mr-4" href="#">
-                More
-              </a>
-            </li>
-          </ul>
-
-          <ul className="flex items-center text-white  ">
-            <li>
-              <a className="" href="#">
-                <FiPlus />
-              </a>
-            </li>
-            <li>
-              <a className="mx-4" href="#">
-                EN
-              </a>
-            </li>
-            <li>
-              <a className="mr-4" href="#">
-                Login
-              </a>
-            </li>
-            <li>
-              <a className="mr-4" href="#">
-                Join TMDB
-              </a>
-            </li>
-            <li>
-              <a className="text-[#00B4E4] text-2xl ml-4 mr-10" href="#">
-                <AiOutlineSearch />
-              </a>
-            </li>
-          </ul>
-        </nav>
         <section className="ml-8">
           <h1 className="text-xl font-bold mb-4">Popular Movies</h1>
           <div className=" grid ">
@@ -205,9 +138,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           <div className=" w-3/4 col-span-1 ">
             <div className="grid w-1/4 col-span-4">
-              <div className="shadow-lg rounded-md w-[200px] h-auto cursor-pointer">
+              <div className="shadow-lg rounded-md w-[200px] h-auto cursor-pointer ">
                 <div className="relative  bg-gray-400 opacity-50 w-8 h-8 rounded-full mb-[-40px] ml-40">
                   <div className="absolute text-white text-2xl left-2 bottom-2">
                     ...
@@ -226,8 +160,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="pl-4">
-                  <h3 className="text-sm font-extrabold pt-4 ">Lorem Ipsum</h3>
-                  <p className="text-sm pb-2 text-[#626664]">loremipsum</p>
+                  <h3 className="text-sm font-extrabold pt-4 hover:text-[#03B4E4] ">
+                    hola
+                  </h3>
+                  <p className="text-sm pb-2 text-[#626664]">hola</p>
                 </div>
               </div>
             </div>
