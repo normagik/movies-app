@@ -1,7 +1,7 @@
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiPlus } from "react-icons/fi";
 
-const movie = () => {
+const navbar = () => {
   return (
     <nav className=" flex items-center justify-between py-0 mb-4 bg-[#032541]">
       <ul className="flex items-center text-white">
@@ -61,4 +61,4 @@ const movie = () => {
   );
 };
 
-export default movie;
+export default navbar;
