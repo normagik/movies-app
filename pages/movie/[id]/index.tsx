@@ -5,6 +5,11 @@ import { BiSolidHeartCircle } from "react-icons/bi";
 import { RiFileMarkFill } from "react-icons/ri";
 import { MdStars } from "react-icons/md";
 import { BsFillPlayFill } from "react-icons/bs";
+import { FaFacebook } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import { BsTwitter } from "react-icons/bs";
+import { BsLink } from "react-icons/bs";
+
 import axios from "axios";
 
 export async function getStaticProps(context: any) {
@@ -56,7 +61,7 @@ const detail = ({ movie }) => {
         </ul>
       </nav>
       <section>
-        <div className="grid grid-cols-2 bg-[#907D57] px-8 py-8 h-screen">
+        <div className="grid grid-cols-2 bg-[#907D57]  px-8 py-8 h-screen">
           <div className="cols-span-1 w-2/4 h-auto">
             <Image
               className="rounded-md"
@@ -112,7 +117,17 @@ const detail = ({ movie }) => {
           </div>
         </div>
       </section>
-      <section></section>
+      <section>
+        <div>
+          <FaFacebook />
+          <BsTwitter />
+          <FiInstagram />
+          <BsLink />
+        </div>
+        <div>
+          <p>{movie.original_language}</p>
+        </div>
+      </section>
     </div>
   );
 };
