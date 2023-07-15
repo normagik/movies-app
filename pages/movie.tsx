@@ -32,16 +32,21 @@ const movie = () => {
       </nav>
       <section>
         <div className="grid grid-cols-2 bg-[#907D57] px-8 py-8 h-screen">
-          <div className="cols-span-1 w-2/4">
+          <div className="cols-span-1 w-2/4 h-auto">
             <Image className="rounded-md" src={testimage} alt="movie poster" />
           </div>
           <div className="cols-span-1 w-full pr-12">
             <div className="ml-[-250px] ">
-              <h1 className="text-5xl text-white font-bold mt-16 ">
+              <h1 className="text-3xl text-white font-bold mt-16 ">
                 The Grand Budapest Hotel
                 <span className="font-light">(2013)</span>
               </h1>
-
+              <div className="text-white">
+                <p>B-15</p>
+                <p>04/25/2014 (MX)</p>
+                <p>Comedy, Drama</p>
+                <p>1h 40m</p>
+              </div>
               <div className="flex items-center">
                 <div className="relative bg-[#081C22] w-12 h-12 rounded-full cursor-pointer ">
                   <div className="absolute text-white text-sm left-2.5 top-3">
