@@ -4,7 +4,7 @@ import { AiFillQuestionCircle } from "react-icons/ai";
 
 const SideSection = () => {
   return (
-    <div className=" w-full col-span-1">
+    <div className=" w-full max-h-full col-span-1 ">
       <div className="flex items-center border border-gray-300 shadow-lg p-4 mb-2 rounded-xl cursor-pointer">
         <p className="font-semibold">Sort</p>
         <RiArrowRightSLine className="inline-block mt-1 ml-auto" />
@@ -20,7 +20,7 @@ const SideSection = () => {
           <MdOutlineKeyboardArrowDown className="inline-block ml-auto " />
         </div>
         <div className="p-2 text-sm">
-          <div className="flex items-center px-2 text-[#999999]">
+          <div className="flex items-center px-2 text-[#999999] mb-2">
             <p>Show Me</p>
             <AiFillQuestionCircle className="inline-block ml-4" />
           </div>
@@ -64,8 +64,8 @@ const SideSection = () => {
             </div>
           </fieldset>
         </div>
-        <div className="px-4 py-2 text-sm">
-          <p className="text-[#999999]">Availabilities</p>
+        <div className="px-4 py-2 text-sm ">
+          <p className="text-[#999999] mb-2">Availabilities</p>
           <div>
             <input
               className="
@@ -82,7 +82,7 @@ const SideSection = () => {
           </div>
         </div>
         <div className="px-4 py-2 text-sm">
-          <p className="text-[#999999]">Release Dates</p>
+          <p className="text-[#999999] mb-2">Release Dates</p>
           <div>
             <input
               className="accent-[#03B4E4]"
