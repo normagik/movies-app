@@ -27,10 +27,10 @@ const SideSection = () => {
           <fieldset className="px-2">
             <div>
               <input
-                className="accent-[#03B4E4]"
+                className="bg-cyan-400"
                 id="everything"
                 type="radio"
-                value=""
+                value="1"
                 name="everything"
                 checked
               />
@@ -40,10 +40,10 @@ const SideSection = () => {
             </div>
             <div>
               <input
-                className="accent-[#03B4E4]"
+                className="bg-cyan-400"
                 id="seen"
                 type="radio"
-                value=""
+                value="2"
                 name="seen"
               />
               <label className="pl-1" htmlFor="seen">
@@ -52,10 +52,10 @@ const SideSection = () => {
             </div>
             <div>
               <input
-                className="accent-[#03B4E4]"
+                className="bg-cyan-400"
                 id="not-seen"
                 type="radio"
-                value=""
+                value="3"
                 name="not seen"
               />
               <label className="pl-1" htmlFor="not-seen">
@@ -69,7 +69,7 @@ const SideSection = () => {
           <div>
             <input
               className="
-                       accent-[#03B4E4]"
+              bg-cyan-400"
               id="availabilities"
               type="checkbox"
               value=""
@@ -85,7 +85,7 @@ const SideSection = () => {
           <p className="text-[#999999] mb-2">Release Dates</p>
           <div>
             <input
-              className="accent-[#03B4E4]"
+              className="bg-cyan-400"
               id="releases"
               type="checkbox"
               value=""
