@@ -19,6 +19,8 @@ export async function getStaticProps(context: any) {
     props: { movie },
   };
 }
+// https://api.themoviedb.org/3/movie/upcoming?api_key=4f298a53e552283bee957836a529baec
+//https://api.themoviedb.org/3/movie/top_rated?api_key=4f298a53e552283bee957836a529baec
 
 export async function getStaticPaths() {
   const response =
@@ -59,8 +61,8 @@ const detail = ({ movie }) => {
         </ul>
       </nav>
       <section>
-        <div className="grid grid-cols-2 bg-[#907D57]  px-8 py-8 h-screen">
-          <div className="cols-span-1 w-2/4 h-auto">
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1 bg-[#907D57]  px-8 py-8 lg:h-screen">
+          <div className="lg:cols-span-1 w-2/4 h-auto">
             <Image
               className="rounded-md"
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -69,8 +71,8 @@ const detail = ({ movie }) => {
               height={600}
             />
           </div>
-          <div className="cols-span-1 w-full pr-12">
-            <div className="ml-[-250px] ">
+          <div className="lg:cols-span-1 lg:w-full pr-12">
+            <div className="lg:ml-[-250px] h-auto ">
               <h1 className="text-3xl text-white font-bold mt-4 ">
                 {movie.title}
                 <span className="font-light ml-2">(2023)</span>

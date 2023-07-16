@@ -17,10 +17,10 @@ const top = ({ movies }) => {
   return (
     <section className="ml-8">
       <h1 className="text-xl font-bold mb-4">Top Rated Movies</h1>
-      <div className=" grid grid-cols-5 ">
+      <div className=" grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-1  ">
         <SideSection />
-        <div className="col-span-4">
-          <div className="grid grid-cols-4 grid-rows-5 gap-y-3">
+        <div className="lg:col-span-4 md:col-span-2 sm:col-span-1">
+          <div className="grid lg:grid-cols-4 lg:grid-rows-5 md:grid-cols-3 sm:grid-cols-1 gap-y-3">
             {movies.results.map((movie: any) => (
               <Card movie={movie} key={movie.id} />
             ))}
