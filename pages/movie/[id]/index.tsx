@@ -1,14 +1,11 @@
 import { IoMdArrowDropdown } from "react-icons/io";
 import Image from "next/image";
+import Credits from "../../../components/credits";
 import { IoListCircleSharp } from "react-icons/io5";
 import { BiSolidHeartCircle } from "react-icons/bi";
 import { RiFileMarkFill } from "react-icons/ri";
 import { MdStars } from "react-icons/md";
 import { BsFillPlayFill } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
-import { FiInstagram } from "react-icons/fi";
-import { BsTwitter } from "react-icons/bs";
-import { BsLink } from "react-icons/bs";
 
 import axios from "axios";
 
@@ -38,6 +35,7 @@ export async function getStaticPaths() {
 }
 
 const detail = ({ movie }) => {
+  console.log(movie);
   return (
     <div>
       <nav className=" flex items-center justify-center pb-4 sticky">
@@ -73,7 +71,7 @@ const detail = ({ movie }) => {
           </div>
           <div className="cols-span-1 w-full pr-12">
             <div className="ml-[-250px] ">
-              <h1 className="text-3xl text-white font-bold mt-16 ">
+              <h1 className="text-3xl text-white font-bold mt-4 ">
                 {movie.title}
                 <span className="font-light ml-2">(2023)</span>
               </h1>
@@ -90,16 +88,15 @@ const detail = ({ movie }) => {
                   </div>
                 </div>
                 <p className="text-white mx-2">User Score</p>
-                <IoListCircleSharp className="text-4xl cursor-pointer mr-2" />
-                <BiSolidHeartCircle className="text-4xl cursor-pointer mr-2" />
-                <RiFileMarkFill className="text-4xl cursor-pointer w-8 h-8 rounded-full mr-2" />
-                <MdStars className="text-4xl cursor-pointer mr-2" />
-                <BsFillPlayFill className="text-white text-4xl cursor-pointer" />
+                <IoListCircleSharp className="text-5xl cursor-pointer mr-4" />
+                <BiSolidHeartCircle className="text-5xl cursor-pointer mr-4" />
+                <RiFileMarkFill className="text-5xl cursor-pointer w-8 h-8 rounded-full mr-4" />
+                <MdStars className="text-5xl cursor-pointer mr-4" />
+                <BsFillPlayFill className="text-white text-5xl cursor-pointer" />
                 <p className="text-white cursor-pointer">Play Trailer</p>
               </div>
               <p className="text-white text-md font-light italic my-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                {movie.tagline}
               </p>
               <h2 className="text-xl text-white font-bold my-2">Overview</h2>
               <p className="text-white text-sm mb-4">{movie.overview}</p>
@@ -117,17 +114,7 @@ const detail = ({ movie }) => {
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <FaFacebook />
-          <BsTwitter />
-          <FiInstagram />
-          <BsLink />
-        </div>
-        <div>
-          <p>{movie.original_language}</p>
-        </div>
-      </section>
+      <Credits movie={movie} key={movie.id} />
     </div>
   );
 };
