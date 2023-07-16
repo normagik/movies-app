@@ -24,7 +24,7 @@ const card = ({ movie }) => {
             </div>
           </div>
           <div className="pl-4">
-            <h3 className="text-sm font-extrabold pt-4 hover:text-[#03B4E4] ">
+            <h3 className="text-sm font-extrabold pt-4 pr-2 hover:text-[#03B4E4] ">
               {movie.title}
             </h3>
             <p className="text-sm pb-2 text-[#626664]">{movie.release_date}</p>
