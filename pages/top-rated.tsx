@@ -17,7 +17,7 @@ const top = ({ top }) => {
   return (
     <section className="ml-8">
       <h1 className="text-xl font-bold mb-4">Top Rated Movies</h1>
-      <div className=" lg:grid lg:grid-cols-4 ">
+      <div className=" grid grid-cols-5 ">
         <SideSection />
         <div className="col-span-4">
           <div className="grid grid-cols-4 grid-rows-5 gap-y-3">
