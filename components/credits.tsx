@@ -44,7 +44,7 @@ const credits = ({ movie }) => {
         <div className="flex w-full h-screen">
           <div className="text-xl font-bold ml-8 mt-10 ">
             <p>Top Billed Cast</p>
-            <div className="mt-8">
+            <div className="mt-6">
               <div className="shadow-lg rounded-md w-auto h-auto cursor-pointer py-2 ">
                 <Image
                   className="rounded-md"
@@ -78,7 +78,7 @@ const credits = ({ movie }) => {
                 <BsLink className="text-4xl pl-2 pb-2" />
               </Link>
             </div>
-            <div>
+            <div className="mt-4">
               <p className="font-bold">Status</p>
               <p>{movie.status}</p>
               <p className="font-bold">Original Language</p>
