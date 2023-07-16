@@ -1,5 +1,16 @@
 import SideSection from "../components/side-section";
+import axios from "axios";
 import Card from "../components/card";
+
+export async function getStaticProps() {
+  const response =
+    await axios(`https://api.themoviedb.org/3/movie/popular?api_key=4f298a53e552283bee957836a529baec
+  `);
+  const movies = response.data;
+  return {
+    props: { movies },
+  };
+}
 
 const popular = ({ movies }) => {
   return (
@@ -9,7 +20,7 @@ const popular = ({ movies }) => {
         <SideSection />
         <div className="lg:col-span-4 md:col-span-2 sm:col-span-1">
           <div className="grid lg:grid-cols-4 lg:grid-rows-5 md:grid-cols-3 sm:grid-cols-1 gap-y-3">
-            {movies?.map((movie: any) => (
+            {movies.results?.map((movie: any) => (
               <Card movie={movie} key={movie.id} />
             ))}
           </div>

@@ -21,7 +21,7 @@ const SideSection = () => {
       </div>
       {toggle && (
         <ul className="absolute bg-white  rounded-lg border border-gray-300 shadow-lg p-2 mt-[-10px] w-[248px]">
-          <Link href="/">
+          <Link href="/popular">
             <li className="hover:text-[#03B4E4] mt-2 cursor-pointer">
               Popular
             </li>
