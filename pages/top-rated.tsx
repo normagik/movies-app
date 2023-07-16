@@ -6,14 +6,14 @@ export async function getStaticProps() {
   const response =
     await axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=4f298a53e552283bee957836a529baec
   `);
-  const top = response.data;
+  const movies = response.data;
   return {
-    props: { top },
+    props: { movies },
   };
 }
 
-const top = ({ top }) => {
-  console.log(top);
+const top = ({ movies }) => {
+  console.log(movies);
   return (
     <section className="ml-8">
       <h1 className="text-xl font-bold mb-4">Top Rated Movies</h1>
@@ -21,7 +21,7 @@ const top = ({ top }) => {
         <SideSection />
         <div className="col-span-4">
           <div className="grid grid-cols-4 grid-rows-5 gap-y-3">
-            {top.results.map((movie: any) => (
+            {movies.results.map((movie: any) => (
               <Card movie={movie} key={movie.id} />
             ))}
           </div>
