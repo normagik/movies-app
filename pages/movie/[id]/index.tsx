@@ -81,7 +81,7 @@ const detail = ({ movie }) => {
                 <p>R</p>
                 <p>{movie.release_date} (MX)</p>
                 <p>lorem ipsum</p>
-                <p>{movie.runtime}mins</p>
+                <p>{movie.runtime} mins</p>
               </div>
               <div className="flex items-center">
                 <div className="relative bg-[#081C22] w-12 h-12 rounded-full cursor-pointer ">
