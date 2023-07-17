@@ -81,7 +81,7 @@ const detail = ({ movie }) => {
                 <p>R</p>
                 <p>{movie.release_date} (MX)</p>
                 <p>lorem ipsum</p>
-                <p>1h 40m</p>
+                <p>{movie.runtime}mins</p>
               </div>
               <div className="flex items-center">
                 <div className="relative bg-[#081C22] w-12 h-12 rounded-full cursor-pointer ">
@@ -89,8 +89,8 @@ const detail = ({ movie }) => {
                     {movie.vote_average.toFixed(0) * 10}%
                   </div>
                 </div>
-                <p className="text-white mx-2">User Score</p>
-                <IoListCircleSharp className="text-5xl cursor-pointer mr-4" />
+                <p className="w-6 text-white mx-2">User Score</p>
+                <IoListCircleSharp className="text-5xl cursor-pointer mx-4" />
                 <BiSolidHeartCircle className="text-5xl cursor-pointer mr-4" />
                 <RiFileMarkFill className="text-5xl cursor-pointer w-8 h-8 rounded-full mr-4" />
                 <MdStars className="text-5xl cursor-pointer mr-4" />

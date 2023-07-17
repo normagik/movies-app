@@ -24,7 +24,7 @@ export async function getStaticProps(context: any) {
 
 export async function getStaticPaths() {
   const response =
-    await axios(`https://api.themoviedb.org/3/movie/popular?api_key=4f298a53e552283bee957836a529baec
+    await axios(`https://api.themoviedb.org/3/movie/now_playing?api_key=4f298a53e552283bee957836a529baec
 `);
   const movies = response.data.results;
   const ids = movies.map((movie: any) => movie.id);
@@ -55,7 +55,7 @@ const credits = ({ movie }) => {
                 />
                 <div className="pl-4">
                   <h3 className="text-sm font-extrabold pt-4 pr-2 hover:text-[#03B4E4] ">
-                    <p>lorem</p>
+                    <p>{credits.name}</p>
                   </h3>
                 </div>
               </div>
